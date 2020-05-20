@@ -1,0 +1,67 @@
+# -- pod 1 --
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod1
+  labels:
+    app: nginx
+    type: infra
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+
+# -- pod 2 --
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod2
+  labels:
+    app: nginx
+    type: infra
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+
+# -- pod 3 --
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod3
+  labels:
+    app: nginx
+    type: infra
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+
+
+# -- replica set to control all previous created pods --
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+  labels:
+    app: nginx
+    type: infra
+
+spec:
+  template:
+    metadata:
+      name: nginx-pod
+      labels:
+        app: nginx
+        type: infra
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx
+
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+      type: infra
+
