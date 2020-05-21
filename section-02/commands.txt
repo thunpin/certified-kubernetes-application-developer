@@ -13,6 +13,7 @@ kubectl create deployment --image=<imagename> <deployname>
 kubectl expose pod <podname> --port=6379 --name <servicename> --dry-run -o yaml
 kubectl create service clusterip <servicename> --tcp=6379:6379 --dry-run -o yaml
 kubectl create namespace <namespacename>
+kubectl config set-context $(kubectl config current-context) --namespace=<namespacename>
 
 
 #options
