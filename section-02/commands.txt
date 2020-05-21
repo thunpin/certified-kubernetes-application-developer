@@ -11,6 +11,7 @@ kubectl scale --replicas=<numofreplicas> <contenttype> <contentname>
 kubectl run <podname> --image=<imagename> --restart=Nver
 kubectl create deployment --image=<imagename> <deployname>
 kubectl expose pod <podname> --port=6379 --name <servicename> --dry-run -o yaml
+kubectl create service clusterip <servicename> --tcp=6379:6379 --dry-run -o yaml
 
 
 #options
