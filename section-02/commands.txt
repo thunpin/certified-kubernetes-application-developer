@@ -14,6 +14,14 @@ kubectl expose pod <podname> --port=6379 --name <servicename> --dry-run -o yaml
 
 
 #options
---dry-run  	will not create the resources only test.
--o yaml		format output yaml|json
-	kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml
+--dry-run  	
+	will not create the resources only test.
+
+-o yaml		
+	format output
+		- wide	text format [default]
+		- json
+		- yaml
+		- name	print only the resource name
+
+## EX: kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml
