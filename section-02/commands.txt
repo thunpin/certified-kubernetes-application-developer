@@ -30,4 +30,7 @@ kubectl config set-context $(kubectl config current-context) --namespace=<namesp
 -n <namsepacename>
 	define the namespace
 
+--all-namespaces
+	used to get resources from all namespaces
+
 ## EX: kubectl run nginx --image=nginx --restart=Never -n test --dry-run -o yaml
