@@ -1,3 +1,4 @@
+kubectl get all
 kubectl create -f <filename>
 kubectl replace -f <filename>
 kubectl edit <contentname>
@@ -6,3 +7,4 @@ kubectl get <contenttype>
 kubectl logs <podname>
 kubectl describe <contenttype> <contentname>
 kubectl scale --replicas=<numofreplicas> <contenttype> <contentname> 
+
