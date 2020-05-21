@@ -1,0 +1,8 @@
+# DNS format
+
+## same namespace
+<servicename>
+
+## diferent namespace
+<servicename>.<clustername>.svc.cluster.local
+
