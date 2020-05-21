@@ -25,4 +25,7 @@ kubectl create service clusterip <servicename> --tcp=6379:6379 --dry-run -o yaml
 		- yaml
 		- name	print only the resource name
 
-## EX: kubectl run nginx --image=nginx --restart=Never --dry-run -o yaml
+-n <namsepacename>
+	define the namespace
+
+## EX: kubectl run nginx --image=nginx --restart=Never -n test --dry-run -o yaml
