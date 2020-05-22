@@ -1,0 +1,21 @@
+docker run <imagename>
+docker ps
+docker ps -a
+
+#
+CMD 	define the executable program
+
+	the command can be:
+	CMD sleep 10
+	or
+	CMD ["sleep", "10"]
+
+	*WRONG
+	CMD ["sleep 10"]
+
+
+ENTRYPOINT
+	similar to the CMD, but the command line parameter can be appended
+	ENTRYPOINT ["sleep"]
+	$ docker run my-sleep 20 <-- it will br executed like CMD ["sleep", "20"]
+
