@@ -19,3 +19,5 @@ ENTRYPOINT
 	ENTRYPOINT ["sleep"]
 	$ docker run my-sleep 20 <-- it will br executed like CMD ["sleep", "20"]
 
+--entrypoint 	this run option replace the default ENTRYPOINT
+
