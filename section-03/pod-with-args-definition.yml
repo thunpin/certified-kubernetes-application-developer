@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-pod
+  labels:
+    app: redis
+    type: infra
+
+spec:
+  containers:
+    - name: redis-container
+      image: redis
+      args: ["redis-server"]  # <-- this is the default redis docker image command
+                              #     the redis docker entrypoint is ["docker-entrypoint.sh"]
