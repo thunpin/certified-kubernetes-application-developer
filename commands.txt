@@ -40,3 +40,12 @@ kubectl create configmap <configname> --from-file=<filepath>
 	used to get resources from all namespaces
 
 ## EX: kubectl run nginx --image=nginx --restart=Never -n test --dry-run -o yaml
+
+## shortcuts
+pod	pods
+ns	namespace
+deploy	deployment
+cm	configmap
+svc	services
+rc	ReplicaController
+rs	ReplicaSet
