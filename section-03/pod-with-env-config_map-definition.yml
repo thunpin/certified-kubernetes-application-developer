@@ -1,0 +1,19 @@
+#
+# WARNING
+# only deploy this pod after the configMap
+#
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-env-configmap-pod
+  labels:
+    app: nginx
+    type: infra
+
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+      envFrom:
+        - configMapRef:
+            name: nginx-configmap
