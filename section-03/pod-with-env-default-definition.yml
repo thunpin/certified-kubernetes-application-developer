@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx
+    type: infra
+
+spec:
+  containers:
+    - name: nginx-container
+      image: nginx
+      env:
+        - name: MY_ENV_VAR
+          value: my_env_var_value
