@@ -18,9 +18,12 @@ kubectl config set-context $(kubectl config current-context) --namespace=<namesp
 kubectl create configmap \
 	<configname> --from-literal=<key_1>=<value_1> \
 		     --from-literal=<key_2>=<value_2>
+kubectl create configmap <configname> --from-file=<filepath>.properties
 
-kubectl create configmap <configname> --from-file=<filepath>
-
+kubectl create secret \
+	<secretname> --from-literal=<key_1>=<value_1> \
+		     --from-literal=<key_2>=<value_2>
+kubectl create secret <secretname> --from-file=<filepath>.properties
 
 #options
 --dry-run  	
